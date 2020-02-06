@@ -50,7 +50,7 @@ body {
 }
 .book-list li:hover{
   opacity: 0.7;
-  text-decoration: line-through;
+  
 }
 .book-list .title{
   font-weight: bold;
