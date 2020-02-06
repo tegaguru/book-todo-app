@@ -8,9 +8,9 @@ Design credit and project inspiration goes to [iamshaunjp](https://github.com/ia
 
 ### `What I learnt`
 
-*You should use hooks and quit using redux boy. Lol!!<br/>
+* You should use hooks and quit using redux boy. Lol!!<br/>
 
-*Sadly this reducer, action and dispatch concept still followed Hooks(Honestly I don tire for React!) 
+* Sadly this reducer, action and dispatch concept still followed Hooks(Honestly I don tire for React!) 
 
 ### `Final words`
 
