@@ -13,12 +13,20 @@ export const bookReducer = (state,action) =>{
         case "EDIT_BOOK":
             return state.map(book=>{
                 if(book.id === action.id){
-                    var newCondition = !book.isEdit;
+                    var newCondition = true;
                     book.isEdit =  newCondition; 
                 }
         
                 return book;
             })
+        case "FINAL_EDIT":
+            return state.map(book=> {
+                if(book.id === action.id){
+                    book.title = action.newTitle;
+                    book.isEdit = false;
+                }
+                return book;
+            }) 
                 
         default: 
             return state
