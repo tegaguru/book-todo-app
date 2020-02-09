@@ -85,3 +85,21 @@ input[type='submit']{
   padding: 6px 20px;
   display: block;
 }
+
+.icon{
+  fill: #ddd;
+  width: 15px;
+  height: 15px;
+}
+
+.details{
+  display: flex;
+  justify-content: space-between;
+}
+
+.details--controls{
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+

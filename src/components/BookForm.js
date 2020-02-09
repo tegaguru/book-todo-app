@@ -13,6 +13,8 @@ const NewBookForm = () =>{
         setTitle('');
         setAuthor('');
     }
+    console.log(title);
+    console.log(author);
     return (
         <form onSubmit={handleSubmit}> 
             <input type="text" placeholder="book title" value={title}

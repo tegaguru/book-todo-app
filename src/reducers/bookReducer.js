@@ -23,6 +23,7 @@ export const bookReducer = (state,action) =>{
             return state.map(book=> {
                 if(book.id === action.id){
                     book.title = action.newTitle;
+                    book.author = action.newAuthor;
                     book.isEdit = false;
                 }
                 return book;
