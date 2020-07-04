@@ -4,30 +4,23 @@ import { bookReducer } from '../reducers/bookReducer';
 export const BookContext = createContext();
 
 
-const BookContextProvider = (props) => {
-    const [books, dispatch] = useReducer(bookReducer,[
-        {title: 'Sophies world', author: 'Jostein Gaarder',id:1, isEdit: false},
-        {title: 'Insight', author: 'Tasha Eurich', id:2, isEdit: false},
-    ], 
+const BookContextProvider = ({children}) => {
+    const [books, dispatch] = useReducer(bookReducer,[], ()=>{
+        const data = localStorage.getItem('books');
+        return data ? JSON.parse(data) : [];
+    }); 
     
-    //this is optional and helps you in caching data! - Almost like a min database for you
-    ()=>{
-        const localData = localStorage.getItem('books');
-        return  localData ? JSON.parse(localData): []
-    })
-    
-
     
     useEffect(()=>{
        localStorage.setItem('books', JSON.stringify(books))
-    })
+    }, [books]);
 
 
     
 
     return(
         <BookContext.Provider value = {{books, dispatch}}>
-            {props.children}
+            {children}
         </BookContext.Provider>
     )
 }

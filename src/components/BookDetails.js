@@ -3,6 +3,7 @@ import { BookContext } from '../contexts/BookContext';
 import {ReactComponent as EditSvg} from '../edit.svg';
 import {ReactComponent as DeleteSvg} from '../delete.svg';
 const BookDetails = ({book}) =>{
+    
     const {dispatch} = useContext(BookContext);
 
     //This was my first try and i don't know why this wasn't working!
